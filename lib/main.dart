@@ -6,7 +6,7 @@ void main() {
 }
 
 class Home extends StatelessWidget {//to enable hot reload
-  @override
+   @override
   Widget build(BuildContext context) {
     return MaterialApp(//hadha el root widget
       home: Scaffold(//hadhaya ely ngued bih el config mtaa basic layout kima navbar w floating Action Button ely hiya button tethat el louta
@@ -16,14 +16,7 @@ class Home extends StatelessWidget {//to enable hot reload
           backgroundColor: Colors.indigo[800],//to change the default color of the navbar
         ),
         body: Center(//body howa el widget el wastaniya w Centre maanetha bch nguedou ely fiwasset el body el kol in center
-          child: Text(
-            'hello again',
-            style: TextStyle(//TextStyle is widget to styling text
-                fontSize: 20.0,
-                fontFamily:'IndieFlower',
-                fontWeight: FontWeight.bold,
-                color:Colors.grey[600]
-            ) ,
+          child: Image(image: AssetImage('assets/bgpic.png')
           ),
         ),
         floatingActionButton: FloatingActionButton(
@@ -35,3 +28,15 @@ class Home extends StatelessWidget {//to enable hot reload
     );
   }
 }
+/*
+
+thama zouz anwa3 ely nejbdouh mel net w ely na9rouh localy
+ely nejbdouh mel net nettaamlou
+child: Image.NetworkImage('URL'),
+or el tari9a el twila
+child: Image(image: NetworkImage('url')
+          ),
+waila nejbdouha localy heka
+child: Image.asset('el blassa'),
+w kif kif fiha tari9a twila
+ */
