@@ -15,17 +15,22 @@ class Home extends StatelessWidget {//to enable hot reload
           centerTitle: true,// bch nhotoh fi el wast
           backgroundColor: Colors.indigo[800],//to change the default color of the navbar
         ),
-        body: Center(//body howa el widget el wastaniya w Centre maanetha bch nguedou ely fiwasset el body el kol in center
-          child: RaisedButton.icon(
-            onPressed: (){
-              print('it hurts me senpai');
-            },
-            icon: Icon(
-              Icons.mail
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text("hello Majdi!"),
+            RaisedButton.icon(onPressed:(){},
+              icon: Icon(
+                Icons.mail
+              ),
+              label: Text("Send"),
             ),
-            label: Text('mail me'),
-            color: Colors.amber,
-          )
+            Container(
+              color: Colors.lightBlue,
+              child: Text("Container"),
+            ),
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {  },//proprities lazemha tkoun maa el FloatingActionButton bch kif nenzlou taamel haja
@@ -37,6 +42,7 @@ class Home extends StatelessWidget {//to enable hot reload
   }
 }
 /*
-RaisedButon.icon tnajem thot fih text
-IconButoon ma tnajemch thot fih text
+nestaamlo row bch nhoto fih widget okhrin
+nestaamlou mainAxisAlignment : MainAxisAlignment.spaceEvenly, bch ykhali space between the elements
+crossAxisAlignment: CrossAxisAlignment.start, bch ykhali space in the y axe verticaly
  */
