@@ -16,8 +16,11 @@ class Home extends StatelessWidget {//to enable hot reload
           backgroundColor: Colors.indigo[800],//to change the default color of the navbar
         ),
         body: Center(//body howa el widget el wastaniya w Centre maanetha bch nguedou ely fiwasset el body el kol in center
-          child: Image(image: AssetImage('assets/bgpic.png')
-          ),
+          child: Icon(
+            Icons.favorite,
+            color :Colors.pink[400],
+            size: 50,
+          )
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {  },//proprities lazemha tkoun maa el FloatingActionButton bch kif nenzlou taamel haja
