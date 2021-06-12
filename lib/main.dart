@@ -16,10 +16,15 @@ class Home extends StatelessWidget {//to enable hot reload
           backgroundColor: Colors.indigo[800],//to change the default color of the navbar
         ),
         body: Center(//body howa el widget el wastaniya w Centre maanetha bch nguedou ely fiwasset el body el kol in center
-          child: Icon(
-            Icons.favorite,
-            color :Colors.pink[400],
-            size: 50,
+          child: RaisedButton.icon(
+            onPressed: (){
+              print('it hurts me senpai');
+            },
+            icon: Icon(
+              Icons.mail
+            ),
+            label: Text('mail me'),
+            color: Colors.amber,
           )
         ),
         floatingActionButton: FloatingActionButton(
@@ -32,14 +37,6 @@ class Home extends StatelessWidget {//to enable hot reload
   }
 }
 /*
-
-thama zouz anwa3 ely nejbdouh mel net w ely na9rouh localy
-ely nejbdouh mel net nettaamlou
-child: Image.NetworkImage('URL'),
-or el tari9a el twila
-child: Image(image: NetworkImage('url')
-          ),
-waila nejbdouha localy heka
-child: Image.asset('el blassa'),
-w kif kif fiha tari9a twila
+RaisedButon.icon tnajem thot fih text
+IconButoon ma tnajemch thot fih text
  */
