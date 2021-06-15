@@ -11,38 +11,91 @@ class Home extends StatelessWidget {//to enable hot reload
     return MaterialApp(//hadha el root widget
       home: Scaffold(//hadhaya ely ngued bih el config mtaa basic layout kima navbar w floating Action Button ely hiya button tethat el louta
         appBar: AppBar(//hadha ll AppBar
-          title: Text("My second app"), // el text ely bch ykoun fi el app bar
+          title: Text("Profil"), // el text ely bch ykoun fi el app bar
           centerTitle: true,// bch nhotoh fi el wast
           backgroundColor: Colors.indigo[800],//to change the default color of the navbar
         ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text("hello Majdi!"),
-            RaisedButton.icon(onPressed:(){},
-              icon: Icon(
-                Icons.mail
+        body:Padding(
+          padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/majdi.jpg'),
+                  radius: 50,
+                ),
               ),
-              label: Text("Send"),
-            ),
-            Container(
-              color: Colors.lightBlue,
-              child: Text("Container"),
-            ),
-          ],
+              Divider(
+                color: Colors.white,
+                height: 60,
+              ),
+              Text(
+                "Name",
+                style: TextStyle(
+                  color: Colors.grey[620],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  letterSpacing: 1,
+                ),
+
+              ),
+              SizedBox(height: 5,),
+              Text(
+                "Majdi Zlitni",
+                style: TextStyle(
+                  color:Colors.indigo[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+              SizedBox(height: 10,),
+              Text(
+                "E-mail",
+                style: TextStyle(
+                  color: Colors.grey[620],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  letterSpacing: 1,
+                ),
+              ),
+              Row(
+                children:[
+                  Icon(
+                    Icons.email,
+                  ),
+                  Text(
+                  "Zlt.Majdi@gmail.com",
+                    style: TextStyle(
+                      color:Colors.indigo[800],
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                ),
+
+                ],
+
+              ),
+
+            ],
+          ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {  },//proprities lazemha tkoun maa el FloatingActionButton bch kif nenzlou taamel haja
-          child: Text('Click'),
-          backgroundColor: Colors.indigo[600],
-        ),
+
       ),
     );
   }
 }
-/*
-nestaamlo row bch nhoto fih widget okhrin
-nestaamlou mainAxisAlignment : MainAxisAlignment.spaceEvenly, bch ykhali space between the elements
-crossAxisAlignment: CrossAxisAlignment.start, bch ykhali space in the y axe verticaly
- */
+class  extends StatefulWidget {
+  const ({Key? key}) : super(key: key);
+
+  @override
+  _State createState() => _State();
+}
+
+class _State extends State<> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
