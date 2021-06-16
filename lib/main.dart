@@ -5,7 +5,13 @@ void main() {
 
 }
 
-class Home extends StatelessWidget {//to enable hot reload
+class Home extends StatefulWidget {//to enable hot reload
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int visited=1;
    @override
   Widget build(BuildContext context) {
     return MaterialApp(//hadha el root widget
@@ -14,6 +20,16 @@ class Home extends StatelessWidget {//to enable hot reload
           title: Text("Profil"), // el text ely bch ykoun fi el app bar
           centerTitle: true,// bch nhotoh fi el wast
           backgroundColor: Colors.indigo[800],//to change the default color of the navbar
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){
+          setState(()
+          {visited+=1;
+          });
+          },
+          child:Icon(Icons.add,
+          color: Colors.white,),
+          backgroundColor: Colors.grey[900],
         ),
         body:Padding(
           padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -73,7 +89,30 @@ class Home extends StatelessWidget {//to enable hot reload
                     ),
                 ),
 
+
                 ],
+
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                  "You visited us:",
+                style: TextStyle(
+                  color: Colors.grey[620],
+                  letterSpacing: 1,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 5,),
+              Text(
+                "$visited",
+                style: TextStyle(
+                  color:Colors.indigo[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
 
               ),
 
@@ -85,17 +124,3 @@ class Home extends StatelessWidget {//to enable hot reload
     );
   }
 }
-class  extends StatefulWidget {
-  const ({Key? key}) : super(key: key);
-
-  @override
-  _State createState() => _State();
-}
-
-class _State extends State<> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
