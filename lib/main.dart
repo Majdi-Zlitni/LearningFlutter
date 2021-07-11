@@ -15,9 +15,36 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   List<Quote> quotes=[
-  Quote("Every kitten grows up to be a cat. They seem so harmless at first—small, quiet, lapping up their saucer of milk. But once their claws get long enough, they draw blood. Sometimes from the hand that feeds them", "Frank Under Wood"),
-  Quote("you will never know your true potential until you break the unfair judgement you put on your self","JIM KWIK"),
+  Quote("Every kitten grows up to be a cat. They seem so harmless at first—small, quiet, lapping up their saucer of milk. But once their claws get long enough, they draw blood. Sometimes from the hand that feeds them.", "Frank Under Wood"),
+  Quote("You will never know your true potential until you break the unfair judgement you put on your self.","JIM KWIK"),
   ];
+  Widget quotetemp(quote){
+    return Card(
+      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          children: [
+            Text(
+              quote.text,
+              style: TextStyle(
+                fontSize: 18.0,
+                color: Colors.grey[600],
+              ),
+            ),
+            SizedBox(height: 6.0),
+            Text(
+              quote.author,
+              style: TextStyle(
+                fontSize: 16.0,
+                color: Colors.grey[800],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,7 +58,7 @@ class _MyAppState extends State<MyApp> {
           )
         ),
         body:Column(
-          children: quotes.map((quote)=>Text('${quote.text}-${quote.author}')).toList(),
+          children: quotes.map((quote)=>quotetemp(quote)).toList(),
         ) ,
       )
     );
