@@ -1,7 +1,6 @@
-# second_project
+# Learning flutter
 
-A new Flutter project.
-
+I love learning but to learn we need ressources so here I put some codes that helped me to learn new concepts
 ## Getting Started
 
 This project is a starting point for a Flutter application.
